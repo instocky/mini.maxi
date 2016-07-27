@@ -7,6 +7,8 @@
     <title></title>
   </head>
   <body>
+    <div class="container">
+
     <h3>Выберите цвет</h3>
     <!-- выбрать из нескольких цветов с помощью формы -->
       <form action="0727.php">
@@ -17,7 +19,8 @@
         </select>
         <p><input type="submit" value="Отправить"></p>
       </form>
-    <p>
+    <p class="answer">
+      <span style="color: $var"></span>
     <?php
     // этим стулом мастер Instocky начинает марафон по изучению PHP
     // начат под влиянием книги "MINI-привычки - MAXI-результаты.pdf"
@@ -27,16 +30,16 @@
     // http://php.net/manual/ru/control-structures.switch.php
 
     $var = $_GET['color'];
-    
+
     switch ($var) {
       case 'red':
-        echo "Вы выбрали красный цвет";
+        echo "Вы выбрали <span style=\"color: $var; font-weight: bold\">красный</span> цвет";
         break;
       case 'blue':
-        echo "Вы выбрали синий цвет";
+        echo "Вы выбрали <span style=\"color: $var; font-weight: bold\">синий</span> цвет";
         break;
       case 'green':
-        echo "Вы выбрали зеленый цвет";
+        echo "Вы выбрали <span style=\"color: $var; font-weight: bold\">зеленый</span> цвет";
         break;
       default:
         echo "Вы еще ничего не выбрали";
@@ -44,6 +47,6 @@
     }
     ?>
   </p>
-
+  </div>
   </body>
 </html>
