@@ -1,2 +1,6 @@
 # folder temp
 tmp/*
+
+# files temp 
+string*.txt
+
